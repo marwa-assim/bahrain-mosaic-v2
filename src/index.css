@@ -53,3 +53,13 @@ body {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   z-index: 10;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}

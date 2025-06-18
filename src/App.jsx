@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './index.css';
 import { landmarks } from './data';
-import Tile from './Tile';
+import Tile from './components/Tile';
 
 const App = () => {
   const [selected, setSelected] = useState(null);
