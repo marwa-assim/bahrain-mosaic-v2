@@ -146,3 +146,24 @@ button:hover {
   width: 100%;
   border-radius: 6px;
 }
+.theme-toggle {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* Theme setup */
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Apply smooth transition */
+body, .light, .dark {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
