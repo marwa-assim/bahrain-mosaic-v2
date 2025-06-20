@@ -1,5 +1,5 @@
 import React from 'react';
-import { landmarks } from '../data/landmarks';
+import { landmarks } from "../data";
 
 const LandmarksPage = () => {
   return (
