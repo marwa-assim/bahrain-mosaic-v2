@@ -1,9 +1,14 @@
 import React from "react";
-import { useTheme } from "../contexts/ThemeContext.jsx";
+import { useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
 import "./Navbar.css";
 
-const Navbar = ({ setPage }) => {
-  const { toggleTheme } = useTheme();
+const Navbar = ({ setPage, setViewMode, viewMode }) => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  const toggleView = () => {
+    setViewMode(viewMode === "grid" ? "mosaic" : "grid");
+  };
 
   return (
     <nav className="navbar">
@@ -15,6 +20,9 @@ const Navbar = ({ setPage }) => {
         <button onClick={() => setPage("landmarks")}>Landmarks</button>
         <button onClick={() => setPage("contact")}>Contact Us</button>
         <button onClick={toggleTheme}>🌙 Toggle Theme</button>
+        <button onClick={toggleView}>
+          {viewMode === "grid" ? "Mosaic View" : "Grid View"}
+        </button>
       </div>
     </nav>
   );
